@@ -15,11 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from tech_gadgets.views import start_page_view
+from django.urls import path, include   # include um Einbinden der URLs der tech_gadgets App zu ermöglichen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', start_page_view, name='start-page'),  # Beispiel für eine Startseiten-URL
-    path('testView/', start_page_view, name='start-page'),  # Beispiel für eine Startseiten-URL
+    path('tech_gadgets/', include('tech_gadgets.urls')),  # Einbinden der URLs der tech_gadgets App
     ]
