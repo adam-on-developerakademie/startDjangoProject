@@ -44,12 +44,11 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    # "django.middleware.csrf.CsrfViewMiddleware",   # die csrf authentifikation deaktiviert
+     "django.middleware.csrf.CsrfViewMiddleware",   # die csrf authentifikation deaktiviert
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5500",
